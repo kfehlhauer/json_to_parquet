@@ -2,9 +2,8 @@ use arrow::array::{ArrayRef, BooleanArray, StringArray, UInt16Array};
 use arrow::record_batch::RecordBatch;
 use parquet::arrow::arrow_reader::ParquetRecordBatchReaderBuilder;
 use parquet::arrow::arrow_writer::ArrowWriter;
-use parquet::basic::{Compression, Encoding};
+use parquet::basic::Compression;
 use parquet::file::properties::WriterProperties;
-use parquet::file::properties::WriterVersion;
 use serde::{Deserialize, Serialize};
 use serde_json::Result;
 use std::fs::File;
@@ -43,10 +42,6 @@ fn main() -> Result<()> {
 }
 
 fn write(vehicles: Vec<Vechicle>) -> Result<()> {
-    let props = WriterProperties::builder()
-        .set_compression(Compression::SNAPPY)
-        .build();
-
     let vins = StringArray::from(
         vehicles
             .iter()
@@ -91,6 +86,10 @@ fn write(vehicles: Vec<Vechicle>) -> Result<()> {
     .unwrap();
 
     let file = File::create("vehicles.parquet").unwrap();
+    let props = WriterProperties::builder()
+        .set_compression(Compression::SNAPPY)
+        .build();
+
     let mut writer = ArrowWriter::try_new(file, batch.schema(), Some(props)).unwrap();
     writer.write(&batch).expect("Unable to write batch");
     writer.close().unwrap();

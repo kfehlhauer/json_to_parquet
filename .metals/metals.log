@@ -1,0 +1,33 @@
+2023.06.14 08:40:20 INFO  Started: Metals version 0.11.12 in workspace '/Users/kf/src/json_to_parquet' for client Visual Studio Code 1.78.2.
+Jun 14, 2023 8:40:20 AM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+Jun 14, 2023 8:40:20 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+Jun 14, 2023 8:40:20 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+Jun 14, 2023 8:40:20 AM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:/Users/kf/src/json_to_parquet/.metals/metals (H2 2.1)
+Jun 14, 2023 8:40:20 AM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+Jun 14, 2023 8:40:20 AM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.007s)
+Jun 14, 2023 8:40:20 AM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+Jun 14, 2023 8:40:20 AM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+Jun 14, 2023 8:40:20 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+Jun 14, 2023 8:40:20 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+Jun 14, 2023 8:40:20 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+Jun 14, 2023 8:40:20 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+Jun 14, 2023 8:40:20 AM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.026s)
+2023.06.14 08:40:20 INFO  time: initialize in 0.35s
+2023.06.14 08:40:21 WARN  Build server is not auto-connectable.
+2023.06.14 08:40:21 WARN  no build tool detected in workspace '/Users/kf/src/json_to_parquet'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.06.18 21:19:33 INFO  Shutting down server
+2023.06.18 21:19:33 INFO  shutting down Metals
+2023.06.18 21:19:33 INFO  Exiting server
